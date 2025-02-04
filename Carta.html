@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre con Carta</title>
+    <link rel="stylesheet" href="ECarta.css" />
+  </head>
+  <body>
+    <div class="container" onclick="abrirCarta()">
+      <div class="sobre"></div>
+      <img src="img1.png" class="img1" />
+      <img src="Img2.png" class="img2" />
+      <div class="tapa"></div>
+      <div class="carta">
+        Hola mi reina hermosa, hice esta pagina sencilla pero con mucho amor
+        solo para preguntarte algo que me hace mucha ilucion
+        <br />
+        Te gustaria ser mi San Valentin?
+        <br />
+        <br />
+        <a href="Yes.html" style="--clr: #1e9bff"><span>Si</span></a>
+        <a onmouseover="moverBoton()" class="btn"><span>No</span></a>
+      </div>
+    </div>
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+    <div class="cloud4"></div>
+    <div class="cloud5"></div>
+    <div class="cloud6"></div>
+    <div class="cloud7"></div>
+
+    <div class="cloud8"></div>
+    <div class="cloud9"></div>
+    <div class="cloud10"></div>
+
+    <div class="cloud11"></div>
+    <div class="cloud12"></div>
+    <div class="cloud13"></div>
+    <div class="cloud14"></div>
+    <div class="cloud15"></div>
+    <div class="cloud16"></div>
+    <div class="cloud17"></div>
+
+    <div class="cloud18"></div>
+    <div class="cloud19"></div>
+    <div class="cloud20"></div>
+
+    <div class="heart1"></div>
+    <div class="heart2"></div>
+    <div class="heart3"></div>
+    <div class="heart4"></div>
+    <div class="heart5"></div>
+    <div class="heart6"></div>
+    <div class="heart7"></div>
+    <script>
+      var open = false;
+      function abrirCarta() {
+        console.log(open);
+        if (open == false) {
+          document.querySelector(".container").classList.toggle("open");
+          setTimeout(() => {
+            document.querySelector(".container").classList.toggle("open2");
+          }, 1000);
+          setTimeout(() => {
+            document.querySelector(".container").classList.toggle("open3");
+          }, 1000);
+          open = true;
+          console.log(open);
+        } else {
+          document.querySelector(".container").classList.toggle("open3");
+          setTimeout(() => {
+            document.querySelector(".container").classList.toggle("open2");
+          }, 1000);
+          setTimeout(() => {
+            document.querySelector(".container").classList.toggle("open");
+          }, 1000);
+          open = false;
+          console.log(open);
+        }
+      }
+
+      function moverBoton() {
+        const button = document.querySelector(".btn");
+
+        const newY = 100;
+        button.style.top = `${newY}px`;
+      }
+    </script>
+  </body>
+</html>
